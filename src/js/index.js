@@ -33,3 +33,15 @@ let removeSecondCanvas = setTimeout(function(){
 	secondCanvas.setAttribute("style","display:none");
 	thirdCanvas.setAttribute("style","display:block")
 },9800)
+
+document.addEventListener("click", () => {
+	const audio = document.querySelector("audio");
+	if (audio) {
+	  audio.play().catch(error => {
+		console.log("Audio play failed:", error);
+	  });
+	}
+}, { once: true }); // Ensures it runs only once
+
+  
+  
